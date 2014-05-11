@@ -1,0 +1,41 @@
+DEPENDENCIES
+  iptables
+  mysql
+  nginx
+  rbenv
+    git: git://github.com/fnichol/chef-rbenv.git
+    revision: 0a3018634bafe58ad21c6ee271af015220e444b9
+  ruby_build
+  unicorn
+  vim
+
+GRAPH
+  apt (2.3.10)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  build-essential (2.0.2)
+  iptables (0.13.2)
+  java (1.22.0)
+  mysql (5.2.6)
+  nginx (2.6.2)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 1.1)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ohai (1.1.12)
+  rbenv (0.7.3)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  rsyslog (1.12.2)
+  ruby_build (0.8.0)
+  runit (1.5.10)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  unicorn (1.3.0)
+  vim (1.1.2)
+  yum (3.2.0)
+  yum-epel (0.3.6)
+    yum (~> 3.0)
