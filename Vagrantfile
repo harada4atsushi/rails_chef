@@ -34,12 +34,27 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       mysql: {
         server_root_password: "rootpass",
       },
+      nginx: {
+        #:binary => "/opt/nginx-1.4.1/sbin",
+        #source: {
+        #  modules: [
+        #    #"http_ssl_module",
+        #    "passenger",
+        #  ]
+        #},
+        passenger: {
+          version: "3.0.21",
+        #    :ruby => "/usr/local/rvm/rubies/ruby-1.9.3-p429/bin/ruby",
+        #    :root => "/usr/local/rvm/gems/ruby-1.9.3-p429/gems/passenger-3.0.21"
+        }
+      }
     }
     chef.run_list = [
       "ruby_build",
       "rbenv::system",
-      "nginx",
+      #"nginx",
       "nginx::passenger",
+      "nginx::source",
       "mysql::client",
       "mysql::server",
       "vim",
